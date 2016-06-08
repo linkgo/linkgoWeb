@@ -26,7 +26,7 @@ module.exports = function(grunt) {
               },
               {
                 expand: true, cwd: './node_modules/semantic-ui/dist/',
-                src: ['semantic.css', 'semantic.js', 'themes/default/assets/fonts/icons.*' ], dest: './public/vendor/semantic/'
+                src: ['semantic.css', 'semantic.min.css', 'semantic.js', 'semantic.min.js', 'themes/default/assets/fonts/icons.*' ], dest: './public/vendor/semantic/'
               },
               {
                 expand: true, cwd: './node_modules/jquery/dist/',
@@ -76,26 +76,6 @@ module.exports = function(grunt) {
 */
             ]
           },
-          blog: {
-            files: [
-              {
-                expand: true, cwd: './public/vendor/bootstrap/', 
-                src: ['bootstrap.js'], dest: './linkgoBlog/themes/bootstrap-blog/source/js/'
-              },
-              {
-                expand: true, cwd: './public/views/home/',
-                src: ['home.js'], dest: './linkgoBlog/themes/bootstrap-blog/source/js/'
-              },
-              {
-                expand: true, cwd: './node_modules/jquery/dist/',
-                src: ['jquery.js'], dest: './linkgoBlog/themes/bootstrap-blog/source/js/'
-              },
-              {
-                expand: true, cwd: './node_modules/fittext.js/',
-                src: 'jquery.fittext.js', dest: './linkgoBlog/themes/bootstrap-blog/source/js/',
-              },
-            ]
-          },
         },
         uglify: {
             options: {
@@ -115,13 +95,6 @@ module.exports = function(grunt) {
             }
         },
         less: {
-            layouts: {
-              files: {
-                  "./linkgoBlog/themes/bootstrap-blog/source/css/linkgo-blog.css": [
-                    "./linkgoBlog/themes/bootstrap-blog/source/css/linkgo-blog.less"
-                  ]
-              }
-            },
             views: {
               files: [{
                 expand: true,
@@ -195,7 +168,6 @@ module.exports = function(grunt) {
                 files: [
                   './public/layouts/**/*.less',
                   './public/views/**/*.less',
-                  './linkgoBlog/themes/bootstrap-blog/source/css/*.less'
                 ],
                 tasks: ['newer:less'],
                 options: {
