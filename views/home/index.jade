@@ -74,7 +74,7 @@ block body
     .ui.feature.vertical.segment
       .ui.three.column.center.aligned.stackable.grid
         .column.column-feature
-          .ui.icon.header
+          a.ui.icon.header(href="https://github.com/linkgo/neurite")
             i.tag.icon
             = __("neurite.name")
           p
@@ -125,12 +125,12 @@ block body
           .ui.three.column.aligned.stackable.divided.grid
             .column
               .ui.card
-                .image
+                a.image
                   img(src='images/portfolio/iot3-650-350.png')
                 .content
-                  .header= __("weather-station.name")
-                  .description
-                    = __("weather-station.description")
+                  a.header= __("weather-station.name")
+                  .meta
+                    a= __("weather-station.description")
                 //.ui.two.bottom.attached.buttons
                   .ui.button
                     i.flaticon-plus.icon
@@ -141,12 +141,14 @@ block body
 
             .column
               .ui.card
-                .image
+                a.image(href="https://blog.linkgo.io/feed-tula-with-factory-monitor/")
                   img(src='images/portfolio/iot1-650-350.png')
                 .content
-                  .header= __("factory-monitor.name")
-                  .description
-                    = __("factory-monitor.description")
+                  a.header(href="https://blog.linkgo.io/feed-tula-with-factory-monitor/")
+                    = __("factory-monitor.name")
+                  .meta
+                    a(href="https://blog.linkgo.io/feed-tula-with-factory-monitor/")
+                      = __("factory-monitor.description")
                 //.ui.two.bottom.attached.buttons
                   .ui.button
                     i.flaticon-plus.icon
@@ -156,12 +158,14 @@ block body
                     |         Watch
             .column
               .ui.card
-                .image
+                a.image(href="https://blog.linkgo.io/boring-buck-button/")
                   img(src='images/portfolio/iot2-650-350.png')
                 .content
-                  .header= __("bbb.name")
-                  .description
-                    = __("bbb.description")
+                  a.header(href="https://blog.linkgo.io/boring-buck-button/")
+                    = __("bbb.name")
+                  .meta
+                    a(href="https://blog.linkgo.io/boring-buck-button/")
+                      = __("bbb.description")
                 //.ui.two.bottom.attached.buttons
                   .ui.button
                     i.flaticon-plus.icon
@@ -265,11 +269,7 @@ block body
               a.item Careers
               a.item Privacy Policy
           .column
-            h5.ui.inverted.header Made with love by
-            br
-            p linkgo.io
-            //addr
-              a.item(href='http://linkgo.io')
-                img(src='images/linkgo-logo-font-1600x480.png', alt='Logo', style='height:20px')
-              br
+            h5.ui.inverted.header Made with love by linkgo.io
+            a.item(href='http://linkgo.io')
+              img(src='images/linkgo-logo-600x600.png', alt='Logo', style='height:60px')
 
