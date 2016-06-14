@@ -120,7 +120,8 @@ app.utility.sendmail = require('./utils/sendmail');
 app.utility.slugify = require('./utils/slugify');
 app.utility.workflow = require('./utils/workflow');
 
-app.listen(4000, function() {
+app.listen(app.config.port, function() {
+  console.log("listen", app.config.port);
 });
 
 module.exports = app;
