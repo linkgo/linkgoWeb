@@ -6,16 +6,16 @@ block head
   title linkgo.io
 
   link(rel='stylesheet', type='text/css', href='/vendor/semantic/semantic.min.css')
-  link(rel='stylesheet', type='text/css', href='/views/home/index.css')
-  link(rel='stylesheet', type='text/css', href='/iconfonts/flaticon.css')
+  link(rel='stylesheet', type='text/css', href='/views/home/index.min.css')
+  link(rel='stylesheet', type='text/css', href='/iconfonts/flaticon.min.css')
+  link(rel='stylesheet', type='text/css', href='/animation/magic.min.css')
 
 block feet
-  //script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js')
   script(src='/vendor/semantic/semantic.min.js')
-  script(src='/views/home/index.js')
+  script(src='/views/home/index.min.js')
   script.
     $(function(){
-    $('.ui.card').popup();
+      $('.ui.card').popup();
     });
 
 block body
@@ -277,11 +277,11 @@ block body
           .column
               a.item(href="mailto:hi@linkgo.io?Subject=Hello%20linkgo.io")
                 h5.ui.inverted.header Mail To Us
-                i.mail.icon.huge
+                i.mail.icon.huge.animBoingInUp
           .column
               a.item(href="https://github.com/linkgo")
                 h5.ui.inverted.header Discover Our Github
-                i.github.icon.huge
+                i.github.icon.huge.animBoingInUp
           //.column
             a.item(href='http://linkgo.io')
               h5.ui.inverted.header Made with love by linkgo.io

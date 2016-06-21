@@ -1,55 +1,22 @@
-$(document)
-  .ready(function() {
+$(document).ready(function() {
+  $('.ui.dropdown')
+    .dropdown();
 
-    var
-      changeSides = function() {
-        $('.ui.shape')
-          .eq(0)
-            .shape('flip over')
-            .end()
-          .eq(1)
-            .shape('flip over')
-            .end()
-          .eq(2)
-            .shape('flip back')
-            .end()
-          .eq(3)
-            .shape('flip back')
-            .end()
-        ;
-      },
-      validationRules = {
-        firstName: {
-          identifier  : 'email',
-          rules: [
-            {
-              type   : 'empty',
-              prompt : 'Please enter an e-mail'
-            },
-            {
-              type   : 'email',
-              prompt : 'Please enter a valid e-mail'
-            }
-          ]
-        }
+  $('.masthead .information')
+    .transition('scale in', 1000);
+
+  var waypoint = new Waypoint({
+    element: $('.animBoingInUp'),
+    handler: function(direction) {
+      if(direction == 'down') {
+        console.log("add");
+        $('.animBoingInUp').addClass('magictime boingInUp');
+      } else if (direction == 'up') {
+        console.log("remove");
+        $('.animBoingInUp').removeClass('magictime boingInUp');
       }
-    ;
+    },
+    offset: 'bottom-in-view'
+  });
 
-    $('.ui.dropdown')
-      .dropdown()
-    ;
-
-    $('.ui.form')
-      .form(validationRules, {
-        on: 'blur'
-      })
-    ;
-
-    $('.masthead .information')
-      .transition('scale in', 1000)
-    ;
-
-    setInterval(changeSides, 3000);
-
-  })
-;
+});

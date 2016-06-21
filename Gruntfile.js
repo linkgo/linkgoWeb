@@ -30,11 +30,15 @@ module.exports = function(grunt) {
               },
               {
                 expand: true, cwd: './node_modules/jquery/dist/',
-                src: ['jquery.js'], dest: './public/vendor/jquery/'
+                src: ['jquery.min.js'], dest: './public/vendor/jquery/'
               },
               {
                 expand: true, cwd: './node_modules/jquery.cookie/',
                 src: ['jquery.cookie.js'], dest: './public/vendor/jquery.cookie/'
+              },
+              {
+                expand: true, cwd: './node_modules/waypoints/lib/',
+                src: ['jquery.waypoints.min.js'], dest: './public/vendor/jquery.waypoints/'
               },
               {
                 expand: true, cwd: './node_modules/fittext.js/',
@@ -42,11 +46,11 @@ module.exports = function(grunt) {
               },
               {
                 expand: true, cwd: './node_modules/react/dist/',
-                src: ['react.js'], dest: './public/vendor/react/'
+                src: ['react.js', 'react.min.js'], dest: './public/vendor/react/'
               },
               {
                 expand: true, cwd: './node_modules/react-dom/dist/',
-                src: ['react-dom.js'], dest: './public/vendor/react-dom/'
+                src: ['react-dom.js', 'react-dom.min.js'], dest: './public/vendor/react-dom/'
               },
 /*
               {
@@ -85,13 +89,15 @@ module.exports = function(grunt) {
               }
             },
             views: {
-                files: [{
-                  expand: true,
-                  cwd: 'public/views/',
-                  src: ['**/*.js', '!**/*.min.js'],
-                  dest: 'public/views/',
-                  ext: '.min.js'
-                }]
+                files: [
+                  {
+                    expand: true,
+                    cwd: 'public/views/',
+                    src: ['**/*.js', '!**/*.min.js'],
+                    dest: 'public/views/',
+                    ext: '.min.js'
+                  }
+                ]
             }
         },
         less: {
@@ -103,6 +109,34 @@ module.exports = function(grunt) {
                 dest: 'public/views/',
                 ext: '.css'
               }]
+            }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            views: {
+                files: [
+                  {
+                    expand: true,
+                    cwd: 'public/views/',
+                    src: ['**/*.css', '!**/*.min.css'],
+                    dest: 'public/views/',
+                    ext: '.min.css'
+                  }
+                ]
+            },
+            iconfonts: {
+                files: [
+                  {
+                    expand: true,
+                    cwd: 'public/iconfonts/',
+                    src: ['**/*.css', '!**/*.min.css'],
+                    dest: 'public/iconfonts/',
+                    ext: '.min.css'
+                  }
+                ]
             }
         },
         banner: '/*!\n' +
@@ -222,6 +256,7 @@ module.exports = function(grunt) {
     // Load the plugins.
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -234,6 +269,6 @@ module.exports = function(grunt) {
 
 
     // Default task(s).
-    grunt.registerTask('default', ['newer:browserify', 'copy', 'newer:uglify', 'newer:less', 'concurrent']);
+    grunt.registerTask('default', ['newer:browserify', 'copy', 'newer:uglify', 'newer:less', 'newer:cssmin', 'concurrent']);
 
 };
