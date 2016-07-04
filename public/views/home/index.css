@@ -206,3 +206,6 @@ recent-works segment
 #home .footer.segment .icon {
   color: white;
 }
+#home .footer.segment .info {
+  color: rgba(255, 255, 255, 0.5);
+}
