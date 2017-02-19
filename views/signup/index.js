@@ -171,6 +171,7 @@ exports.signup = function(req, res){
             return workflow.emit('exception', err);
           }
 
+          console.log(user);
           workflow.outcome.defaultReturnUrl = user.defaultReturnUrl();
           workflow.emit('response');
         });

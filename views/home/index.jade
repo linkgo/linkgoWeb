@@ -37,7 +37,7 @@ block body
                   i.idea.icon
                   = __("home.lab")
 
-            .right.menu
+            //.right.menu
               if user && user.username
                 a.ui.item
                   i.user.icon
@@ -58,7 +58,7 @@ block body
               i.idea.icon
               = __("home.lab")
 
-            .right.menu
+            //.right.menu
               if user && user.username
                 a.ui.item
                   i.user.icon
@@ -71,7 +71,7 @@ block body
           .ui.hidden.transition.information
             h1.ui.inverted.centered.header= __("home.slogan")
             p.ui.centered.lead= __("home.description")
-            a.large.basic.inverted.animated.fade.ui.button(href='/login')
+            //a.large.basic.inverted.animated.fade.ui.button(href='/login')
               .visible.content= __("home.find_out_more")
               .hidden.content= __("home.login")
             //.ui.centerted.image
@@ -263,11 +263,11 @@ block body
               .two.column.row
                 .column
                     a.item(href="mailto:hi@linkgo.io?Subject=Hello%20linkgo.io")
-                      h5.ui.inverted.header Mail To Us
+                      h5.ui.inverted.header Mail
                       i.mail.icon.huge.animBoingInUp
                 .column
                     a.item(href="https://github.com/linkgo")
-                      h5.ui.inverted.header Discover Our Github
+                      h5.ui.inverted.header Github
                       i.github.icon.huge.animBoingInUp
                 //.column
                   a.item(href='http://linkgo.io')

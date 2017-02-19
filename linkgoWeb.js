@@ -24,14 +24,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // db
-app.db = mongoose.createConnection(config.mongodb.uri);
-app.db.on('error', console.error.bind(console, 'mongoose connection error: '));
-app.db.once('open', function () {
-  // mongodb connected!
-  console.log("mongodb", config.mongodb.uri, "connected");
-});
+// app.db = mongoose.createConnection(config.mongodb.uri);
+// app.db.on('error', console.error.bind(console, 'mongoose connection error: '));
+// app.db.once('open', function () {
+//   // mongodb connected!
+//   console.log("mongodb", config.mongodb.uri, "connected");
+// });
+
 // models
-require('./models/models')(app, mongoose);
+//require('./models/models')(app, mongoose);
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -61,8 +62,8 @@ i18n.configure({
 });
 app.use(i18n.init);
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 app.use(csrf({ cookie: { signed: true } }));
 //app.use(csrf());
 
