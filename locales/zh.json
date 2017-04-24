@@ -14,7 +14,7 @@
     "category_device": "智能设备",
     "project_name_distributed_data_collection": "分布式数据采集",
     "project_name_iot_device": "物联网设备",
-    "recent-works": "新鲜案例"
+    "recent-works": "一些案例"
   },
   "neurite": {
     "name": "Neurite",
@@ -25,8 +25,8 @@
     "description": "高效可靠的传输数据"
   },
   "dataCloud": {
-    "name": "数据云",
-    "description": "管理数据并进行实时互动"
+    "name": "Go.IoT",
+    "description": "不仅仅是 IoT 的云平台"
   },
   "weather-station": {
     "name": "Weather Station",

@@ -14,7 +14,7 @@
     "category_device": "device",
     "project_name_distributed_data_collection": "Distributed Data Collection",
     "project_name_iot_device": "IOT Device",
-    "recent-works": "Checkout Our Recent Works"
+    "recent-works": "Some Works"
   },
   "neurite": {
     "name": "Neurite",
@@ -25,8 +25,8 @@
     "description": "Pass data with performance and reliability"
   },
   "dataCloud": {
-    "name": "Data cloud",
-    "description": "Manage & Interact with your data in real time"
+    "name": "Go.IoT",
+    "description": "Cloud platform for more than IoT"
   },
   "weather-station": {
     "name": "Weather Station",
