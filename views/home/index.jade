@@ -80,6 +80,15 @@ block body
     .ui.feature.vertical.segment
       .ui.three.column.center.aligned.stackable.grid
         .column.column-feature
+          a.ui.icon.header(href="https://goiot.cc")
+            i.bar.chart.icon
+            = __("dataCloud.name")
+          p
+            = __("dataCloud.description")
+          //p
+            a.ui.button(href='#')
+              | Share
+        .column.column-feature
           a.ui.icon.header(href="https://github.com/linkgo/neurite")
             i.tag.icon
             = __("neurite.name")
@@ -98,15 +107,6 @@ block body
             a.ui.green.right.labeled.icon.button(href='#')
               | Research
               i.right.flaticon-move.icon
-        .column.column-feature
-          a.ui.icon.header(href="https://goiot.cc")
-            i.bar.chart.icon
-            = __("dataCloud.name")
-          p
-            = __("dataCloud.description")
-          //p
-            a.ui.button(href='#')
-              | Share
 
       //.ui.centered.grid
         h3.subscribe-header Subscribe to Mailing List
@@ -131,14 +131,34 @@ block body
           .ui.three.column.aligned.stackable.divided.grid
             .column
               .ui.card
+                a.image
+                  img(src='/images/portfolio/lab-650x350.png')
+                .content
+                  a.header
+                    = __("lab.name")
+                  .meta
+                    br
+                    a
+                      = __("lab.description")
+                //.ui.two.bottom.attached.buttons
+                  .ui.button
+                    i.flaticon-plus.icon
+                    |         Queue
+                  .ui.pink.button
+                    i.flaticon-play.icon
+                    |         Watch
+
+            .column
+              .ui.card
                 a.image(href="http://lab.linkgo.io/neuriteSensor")
-                  img(src='http://o7m387gr6.bkt.clouddn.com/iot3-650-350.png')
+                  img(src='/images/portfolio/sensor-650x350.png')
                 .content
                   a.header(href="http://lab.linkgo.io/neuriteSensor")
-                    = __("weather-station.name")
+                    = __("environmental-perception.name")
                   .meta
+                    br
                     a(href="http://lab.linkgo.io/neuriteSensor")
-                      = __("weather-station.description")
+                      = __("environmental-perception.description")
                 //.ui.two.bottom.attached.buttons
                   .ui.button
                     i.flaticon-plus.icon
@@ -151,35 +171,16 @@ block body
               .ui.card
                 // a.image(href="http://blog.linkgo.io/feed-tula-with-factory-monitor/")
                 a.image
-                  img(src='http://o7m387gr6.bkt.clouddn.com/iot1-650-350.png')
+                  img(src='/images/portfolio/conveyor-650x350.png')
                 .content
                   // a.header(href="http://blog.linkgo.io/feed-tula-with-factory-monitor/")
                   a.header
                     = __("factory-monitor.name")
                   .meta
+                    br
                     // a(href="http://blog.linkgo.io/feed-tula-with-factory-monitor/")
                     a
                       = __("factory-monitor.description")
-                //.ui.two.bottom.attached.buttons
-                  .ui.button
-                    i.flaticon-plus.icon
-                    |         Queue
-                  .ui.pink.button
-                    i.flaticon-play.icon
-                    |         Watch
-            .column
-              .ui.card
-                // a.image(href="http://blog.linkgo.io/boring-buck-button/")
-                a.image
-                  img(src='http://o7m387gr6.bkt.clouddn.com/iot2-650-350.png')
-                .content
-                  // a.header(href="http://blog.linkgo.io/boring-buck-button/")
-                  a.header
-                    = __("bbb.name")
-                  .meta
-                    // a(href="http://blog.linkgo.io/boring-buck-button/")
-                    a
-                      = __("bbb.description")
                 //.ui.two.bottom.attached.buttons
                   .ui.button
                     i.flaticon-plus.icon

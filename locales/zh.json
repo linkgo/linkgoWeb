@@ -16,6 +16,10 @@
     "project_name_iot_device": "物联网设备",
     "recent-works": "一些案例"
   },
+  "dataCloud": {
+    "name": "Go.IoT",
+    "description": "自由快速地在云端部署IoT应用"
+  },
   "neurite": {
     "name": "Neurite",
     "description": "与现实世界交互数据的无线节点"
@@ -24,20 +28,16 @@
     "name": "MQTT 集群",
     "description": "高效可靠的传输数据"
   },
-  "dataCloud": {
-    "name": "Go.IoT",
-    "description": "不仅仅是 IoT 的云平台"
+  "lab": {
+    "name": "智慧实验室",
+    "description": "在生物医药、检验检疫等实验室中替代大量的手工重复劳动，并实时监控实验设备，让一切流程变得有条不紊，有据可查"
   },
-  "weather-station": {
-    "name": "Weather Station",
-    "description": "使用Neurite节点，只要有internet的地方，就可以获得实时气象数据"
+  "environmental-perception": {
+    "name": "环境感知",
+    "description": "使用Neurite节点，在地球的任何一个角落，只要有网络，都可以轻松获得实时的环境数据"
   },
   "factory-monitor": {
-    "name": "Factory Monitor",
-    "description": "通过云端的仪表盘，你可以监控工厂每一个节点的状态，甚至自定义计划进行自动化管理"
-  },
-  "bbb": {
-    "name": "Boring Buck Button",
-    "description": "这不仅仅是一个无聊的小玩意，它让你获知周围小伙伴的潜在情绪，事实上，这是一种全新的互动方式"
+    "name": "工业控制",
+    "description": "通过云端的仪表盘，你可以监控工厂每一个流程和节点的状态，自定义计划进行自动化处理"
   }
 }

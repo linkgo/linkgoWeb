@@ -16,6 +16,10 @@
     "project_name_iot_device": "IOT Device",
     "recent-works": "Some Works"
   },
+  "dataCloud": {
+    "name": "Go.IoT",
+    "description": "Deploy your IoT cloud freely and efficiently"
+  },
   "neurite": {
     "name": "Neurite",
     "description": "Wireless node to input/output with real world"
@@ -24,20 +28,16 @@
     "name": "MQTT Cluster",
     "description": "Pass data with performance and reliability"
   },
-  "dataCloud": {
-    "name": "Go.IoT",
-    "description": "Cloud platform for more than IoT"
+  "lab": {
+    "name": "Smart Lab",
+    "description": "In biomedical labs, automation has been made possible in substitute of huge amount of manual operations, together with equipment monitoring, all work flows turned out to be efficiently systematical and traceable."
   },
-  "weather-station": {
-    "name": "Weather Station",
-    "description": "Base on Neurite, In every corner on this planet with internet, you can get the real time data like temperature, humidity."
+  "environmental-perception": {
+    "name": "Environmental Perception",
+    "description": "Based on Neurite, in every corner on this planet with internet access, you can get the real time environment data easily."
   },
   "factory-monitor": {
     "name": "Factory Monitor",
-    "description": "On a cloud dashboard, you can monitor and control your interesting point of your factory, or even set smart plan to do thing automatically."
-  },
-  "bbb": {
-    "name": "Boring Buck Button",
-    "description": "Made with boring of linkgo.io, this cool craft will show some potential emotion of guys besides you. In fact, it's a craft help people to interact in a new way."
+    "description": "With a cloud dashboard, you can monitor and control any flows or nodes in your factory, and set smart plans to do processing automatically."
   }
 }
